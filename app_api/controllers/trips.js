@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Trip = require('../../app_server/models/travlr'); //register model
+const Trip = require('../models/travlr'); //register model
 const Model = mongoose.model('trips');
 
 //GET: /trips - list all the trips
