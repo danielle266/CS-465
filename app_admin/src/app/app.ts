@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router'
 import { NavbarComponent } from './navbar/navbar'
 
 @Component({
-  selector: 'app-root',
-  standalone:true,
+  selector: 'app-component',
+  standalone: true,
   imports: [CommonModule, RouterOutlet, NavbarComponent],
-  templateUrl: './app.html',
+  templateUrl: '/app.html',
   styleUrl: './app.css'
+
 })
 export class App {
   title = ('Travlr Getaway Admin!');
