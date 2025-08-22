@@ -9,9 +9,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  styleUrls: ['./navbar.css'],
 })
-
 export class NavbarComponent implements OnInit {
   constructor(
     private authenticationService: Authentication

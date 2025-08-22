@@ -5,8 +5,9 @@ import { AuthResponse } from '../models/auth-response';
 import { TripData } from '../services/trip-data';
 
 
-
-
+@Injectable({
+ providedIn: 'root'
+})
 export class Authentication {
 
 

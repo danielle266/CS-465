@@ -8,9 +8,10 @@ import { TripData } from '../services/trip-data';
 
 @Component({
   selector: 'app-add-trip',
+  standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './add-trip.html',
-  styleUrl: './add-trip.css'
+  styleUrls: ['./add-trip.css']
 })
 export class AddTrip implements OnInit {
   addForm!: FormGroup;

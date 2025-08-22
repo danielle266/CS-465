@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar'
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavbarComponent],
   templateUrl: '/app.html',
-  styleUrl: './app.css'
+  styleUrls : ['./app.css'],
 
 })
 export class App {

@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, TripCard],
   templateUrl: './trip-listing.html',
-  styleUrl: './trip-listing.css',
+  styleUrls: ['./trip-listing.css'],
   providers: [TripData]
 
 })
@@ -38,6 +38,7 @@ export class TripListing implements OnInit {
     this.tripData.getTrips()
       .subscribe({
         next: (value: any) => {
+          console.info('trips => ', value);
           this.trips = value;
           if (value.length > 0) {
             this.message = 'There are ' + value.length + ' trips available.';

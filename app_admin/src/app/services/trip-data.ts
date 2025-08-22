@@ -14,12 +14,11 @@ import { Trip } from '../models/trip';
 })
 export class TripData {
 
-
   constructor(
     private http: HttpClient,
     @Inject (BROWSER_STORAGE) private storage: Storage
   ) { }
-  baseUrl = 'http://localhost:3000/api';
+  baseUrl = 'http://localhost:3000/api/trips';
 
   // Call to our /login endpoint, returns JWT
   login(user: User, passwd: string): Observable<AuthResponse> {
