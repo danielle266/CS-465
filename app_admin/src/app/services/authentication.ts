@@ -3,7 +3,7 @@ import { BROWSER_STORAGE } from '../storage';
 import { User } from '../models/user';
 import { AuthResponse } from '../models/auth-response';
 import { TripData } from '../services/trip-data';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
  providedIn: 'root'

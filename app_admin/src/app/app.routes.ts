@@ -7,7 +7,7 @@ import { Login } from './login/login';
 export const routes: Routes = [
   { path: 'add-trip', component: AddTrip },
   { path: 'edit-trip', component: EditTrip },
-  { path: '', component: TripListing, pathMatch: 'full' },
+  { path: 'login', component: Login },
   { path: '', component: TripListing, pathMatch: 'full' }
 
 ];

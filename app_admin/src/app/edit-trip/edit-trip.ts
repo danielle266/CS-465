@@ -52,9 +52,12 @@ export class EditTrip implements OnInit {
     this.tripData.getTrip(tripCode)
       .subscribe({
         next: (value: any) => {
-          this.trip = value;
-          // Fix: editform -> editForm (capital F)
-          this.editForm.patchValue(value[0]);
+          this.trip = value[0];
+          // Patch values normally
+          this.editForm.patchValue({
+            ...this.trip,
+           start: new Date(this.trip.start).toISOString().split('T')[0] // "yyyy-MM-dd"
+          });
           if (!value) {
             this.message = 'No Trip Retrieved!';
           } else {

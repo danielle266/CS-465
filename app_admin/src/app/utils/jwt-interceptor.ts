@@ -10,7 +10,7 @@ import { Authentication } from '../services/authentication';
 
   @Injectable()
   export class JwtInterceptor implements HttpInterceptor {
-    constructor(private authenticationService: Authentication) { }
+    constructor(private authentication: Authentication) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
       let isAuthAPI: boolean;
@@ -21,8 +21,8 @@ import { Authentication } from '../services/authentication';
         isAuthAPI = false;
       }
 
-      if (this.authenticationService.isLoggedIn() && !isAuthAPI) {
-        let token = this.authenticationService.getToken();
+      if (this.authentication.isLoggedIn() && !isAuthAPI) {
+        let token = this.authentication.getToken();
 
         const authReq = request.clone({
           setHeaders: {
